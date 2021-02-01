@@ -1,24 +1,12 @@
-let inputs = document.querySelectorAll('input');
-let button = document.querySelector('.submit');
-// function verify(e) {
-//     for (input of inputs) {
-//         if (input.value.trim() !== '') {
-//             button.disabled = false;
-//             button.classList.add('active');
-//         } else {
-//             button.disabled = true;
-//             button.classList.remove('active');
-//         }
-//     }
-// }
-
 const Modal = {
     open() {
         document
             .querySelector('.modal-overlay')
             .classList
             .add('active');
-        inputs[0].focus();
+        document
+            .querySelector('#description')
+            .focus();
     },
     close() {
         document
@@ -190,6 +178,8 @@ const Form = {
         event.preventDefault();
 
         try {
+            button.disabled = false;
+            button.classList.add('active');
             Form.validateFields()
             const transaction = Form.formatValues()
             Transaction.add(transaction)

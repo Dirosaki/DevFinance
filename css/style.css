@@ -243,16 +243,12 @@ input {
     height: 50px;
     border: none;
     color: #fff;
-    background-color: darkgrey;
-    border-radius: .25rem;
-    cursor: not-allowed;
-}
-
-.submit.active {
     cursor: pointer;
     background-color: var(--green);
+    border-radius: .25rem;
 }
-.submit.active:hover {
+
+.submit:hover {
     background-color: var(--light-green);
 }
 
