@@ -178,8 +178,6 @@ const Form = {
         event.preventDefault();
 
         try {
-            button.disabled = false;
-            button.classList.add('active');
             Form.validateFields()
             const transaction = Form.formatValues()
             Transaction.add(transaction)
